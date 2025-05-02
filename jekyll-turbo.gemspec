@@ -35,10 +35,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "jekyll", ">= 3.7", "< 5.0"
 
-  spec.add_development_dependency "minitest"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rubocop"
-
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+  spec.metadata["rubygems_mfa_required"] = "true"
 end
