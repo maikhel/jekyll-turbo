@@ -30,7 +30,7 @@ module Jekyll
 
       # Hook into the post_render step for each page
       Jekyll::Hooks.register :pages, :post_render do |page|
-        Jekyll::Turbo::Inject.add_script(page)
+        Jekyll::Turbo::Injector.add_script(page)
       end
     end
   end
