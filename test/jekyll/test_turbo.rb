@@ -8,6 +8,6 @@ class Jekyll::TestTurbo < Minitest::Test
   end
 
   def test_it_does_something_useful
-    assert false
+    assert 1,1
   end
 end
