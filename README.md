@@ -1,8 +1,9 @@
 # Jekyll::Turbo
 
+[![Build Status](https://github.com/maikhel/jekyll-turbo/actions/workflows/main.yml/badge.svg)](https://github.com/maikhel/jekyll-turbo/actions)
+
 **jekyll-turbo** is a simple Jekyll plugin that brings [Hotwire Turbo Drive](https://turbo.hotwired.dev/) to your static site. It automatically injects the necessary `<script type="module">` tag into your HTML files at build time, enabling seamless, fast page transitions - without a single line of JavaScript.
 
-This plugin is ideal for Jekyll users who want modern navigation speed without needing Webpack, npm, or any client-side setup.
 
 ## Installation
 
@@ -41,10 +42,25 @@ This plugin is ideal for Jekyll users who want modern navigation speed without n
 ## Usage
 
 Install the plugin as described above.
+The plugin will automatically inject this tag into the `<head>` of all your generated `.html` pages:
+
+```HTML
+<script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/dist/turbo.es2017-esm.js"></script>
+```
+Then, you can immediately use all Hotwire Turbo features on the client side, such as Turbo Drive and Turbo Frames.
 
 **⚠️ Tip:** Note that the `github-pages` gem runs in `safe` mode and only allows [a defined set of plugins](https://pages.github.com/versions/). To use this gem in GitHub Pages, you need to build your site locally or use a CI (e.g. [Github Workflow](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow)).
 
 [Click here for more information.](https://jekyllrb.com/docs/continuous-integration/github-actions/)
+
+## Planned Features
+This plugin is currently zero-config and focused on simplicity. Future improvements may include:
+
+- [ ] Option to serve Turbo locally instead of using a CDN
+- [ ] Support for customizing the Turbo version
+- [ ] Configuration via `_config.yml`
+
+Feel free to open an issue or contribute via pull request if you'd like to help!
 
 ## Contributing
 
