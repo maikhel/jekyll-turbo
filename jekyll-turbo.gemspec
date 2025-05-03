@@ -8,17 +8,22 @@ Gem::Specification.new do |spec|
   spec.authors = ["maikhel"]
   spec.email = ["mlecicki@gmail.com"]
 
-  spec.summary = "Simple Jekyll wrapper for Hotwire Turbo library"
-  spec.description = "Longer description of my gem"
-  spec.homepage = "https://maikhel.github.io/"
+  spec.summary = "A Jekyll plugin that automatically injects Turbo Drive to enable faster," \
+                 "client-side page transitions."
+  spec.description = "jekyll-turbo is a plugin for Jekyll that seamlessly integrates Hotwire's " \
+                     "Turbo Drive into your static site. It automatically injects the necessary " \
+                     "script tag into your HTML output to enable client-side Turbo features, such as " \
+                     "Turbo Drive and Turbo Frames."
+  spec.homepage = "https://github.com/maikhel/jekyll-turbo/"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
-  spec.metadata["allowed_push_host"] = "https://maikhel.github.io/"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://maikhel.github.io/"
-  spec.metadata["changelog_uri"] = "https://maikhel.github.io/"
+  spec.metadata["source_code_uri"] = "https://github.com/maikhel/jekyll-turbo/"
+  spec.metadata["changelog_uri"] = "https://github.com/maikhel/jekyll-turbo/blob/main/CHANGELOG.md"
+  spec.metadata["bug_tracker_uri"] = "https://github.com/maikhel/jekyll-turbo/issues"
+  spec.metadata["documentation_uri"] = "https://github.com/maikhel/jekyll-turbo#readme"
+  spec.metadata["rubygems_mfa_required"] = "true"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -34,8 +39,4 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "jekyll", ">= 3.7", "< 5.0"
-
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
-  spec.metadata["rubygems_mfa_required"] = "true"
 end
