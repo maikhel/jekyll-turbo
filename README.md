@@ -1,28 +1,50 @@
 # Jekyll::Turbo
 
-TODO: Delete this and the text below, and describe your gem
+**jekyll-turbo** is a simple Jekyll plugin that brings [Hotwire Turbo Drive](https://turbo.hotwired.dev/) to your static site. It automatically injects the necessary `<script type="module">` tag into your HTML files at build time, enabling seamless, fast page transitions - without a single line of JavaScript.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jekyll/turbo`. To experiment with that code, run `bin/console` for an interactive prompt.
+This plugin is ideal for Jekyll users who want modern navigation speed without needing Webpack, npm, or any client-side setup.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+1. Add the following to your site's `Gemfile`:
 
-Install the gem and add to the application's Gemfile by executing:
+   ```ruby
+   gem 'jekyll-turbo'
+   ```
 
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
+2. Add the following to your site's `_config.yml`:
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+   ```yml
+   plugins:
+     - jekyll-turbo
+   ```
 
-```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
+   **Note**: if `jekyll --version` is less than `3.5` use:
+
+   ```yml
+   gems:
+     - jekyll-turbo
+   ```
+
+3. In your terminal, execute:
+
+   ```bash
+   bundle
+   ```
+
+4. (re)start your Jekyll server with:
+
+   ```bash
+   jekyll serve
+   ```
 
 ## Usage
 
-TODO: Write usage instructions here
+Install the plugin as described above.
+
+**⚠️ Tip:** Note that the `github-pages` gem runs in `safe` mode and only allows [a defined set of plugins](https://pages.github.com/versions/). To use this gem in GitHub Pages, you need to build your site locally or use a CI (e.g. [Github Workflow](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow)).
+
+[Click here for more information.](https://jekyllrb.com/docs/continuous-integration/github-actions/)
 
 ## Development
 
@@ -32,7 +54,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-turbo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/jekyll-turbo/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/maikhel/jekyll-turbo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/maikhel/jekyll-turbo/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -40,4 +62,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Jekyll::Turbo project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/jekyll-turbo/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Jekyll::Turbo project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/maikhel/jekyll-turbo/blob/main/CODE_OF_CONDUCT.md).
