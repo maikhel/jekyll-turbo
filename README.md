@@ -1,6 +1,6 @@
 # Jekyll::Turbo
 
-[![Build Status](https://github.com/maikhel/jekyll-turbo/actions/workflows/main.yml/badge.svg)](https://github.com/maikhel/jekyll-turbo/actions)
+[![Build Status](https://github.com/maikhel/jekyll-turbo/actions/workflows/main.yml/badge.svg)](https://github.com/maikhel/jekyll-turbo/actions) [![Gem Version](https://badge.fury.io/rb/jekyll-turbo.svg)](https://badge.fury.io/rb/jekyll-turbo)
 
 **jekyll-turbo** is a simple Jekyll plugin that brings [Hotwire Turbo Drive](https://turbo.hotwired.dev/) to your static site. It automatically injects the necessary `<script type="module">` tag into your HTML files at build time.
 
