@@ -1,0 +1,8 @@
+title: Test Site
+url: ""
+baseurl: ""
+plugins:
+  - jekyll-turbo
+
+# Build settings
+markdown: kramdown
